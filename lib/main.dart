@@ -76,12 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.asset(
-                          'assets/images/t-shirt.png',
-                          width: 100,
-                          height: 110,
-                          fit: BoxFit.contain,
-                        ),
+                        Image.asset('assets/images/t-shirt.png', width: 100, height: 110, fit: BoxFit.contain,),
                         SizedBox(width: 15),
                         Expanded(
                           child: Column(
@@ -90,14 +85,33 @@ class _MyHomePageState extends State<MyHomePage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
-                                    'T-Shirt',
-                                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                                  ),
+                                  Text('T-Shirt', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                                   IconButton(onPressed: (){}, icon: Icon(Icons.more_vert)),
                                 ],
                               ),
-                              Text('Color: Black, Size: L'),
+                             // Text('Color: Black, Size: L'),
+                              RichText(
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'Color: ',
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    TextSpan(
+                                      text: 'Black',
+                                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                    TextSpan(
+                                      text: ', Size: ',
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    TextSpan(
+                                      text: 'L',
+                                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
                               Row(
                                 children: [
                                   IconButton(
@@ -149,12 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.asset(
-                          'assets/images/jersey.png',
-                          width: 100,
-                          height: 110,
-                          fit: BoxFit.contain,
-                        ),
+                        Image.asset('assets/images/jersey.png', width: 100, height: 110, fit: BoxFit.contain,),
                         SizedBox(width: 15),
                         Expanded(
                           child: Column(
@@ -163,14 +172,32 @@ class _MyHomePageState extends State<MyHomePage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
-                                    'Jersey',
-                                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                                  ),
+                                  Text('Jersey', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                                   IconButton(onPressed: (){}, icon: Icon(Icons.more_vert)),
                                 ],
                               ),
-                              Text('Color: Gray, Size: L'),
+                              RichText(
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'Color: ',
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    TextSpan(
+                                      text: 'Black',
+                                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                    TextSpan(
+                                      text: ', Size: ',
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    TextSpan(
+                                      text: 'L',
+                                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
                               Row(
                                 children: [
                                   IconButton(
@@ -222,12 +249,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.asset(
-                          'assets/images/hoodie.png',
-                          width: 100,
-                          height: 110,
-                          fit: BoxFit.contain,
-                        ),
+                        Image.asset('assets/images/hoodie.png', width: 100, height: 110, fit: BoxFit.contain,),
                         SizedBox(width: 15),
                         Expanded(
                           child: Column(
@@ -236,14 +258,32 @@ class _MyHomePageState extends State<MyHomePage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
-                                    'Hoodie',
-                                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                                  ),
+                                  Text('Hoodie', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                                   IconButton(onPressed: (){}, icon: Icon(Icons.more_vert)),
                                 ],
                               ),
-                              Text('Color: Black, Size: M'),
+                              RichText(
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'Color: ',
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    TextSpan(
+                                      text: 'Black',
+                                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                    TextSpan(
+                                      text: ', Size: ',
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                    TextSpan(
+                                      text: 'M',
+                                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
                               Row(
                                 children: [
                                   IconButton(
@@ -285,9 +325,19 @@ class _MyHomePageState extends State<MyHomePage> {
               // Total Amount
 
               SizedBox(height: 180),
-              Text(
-                'Total amount:                               \$$totalAmount',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: 'Total amount:          ',
+                      style: TextStyle(color: Colors.grey, fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    TextSpan(
+                      text: '            \$$totalAmount',
+                      style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
               // Check Out Button
               SizedBox(height: 10),
